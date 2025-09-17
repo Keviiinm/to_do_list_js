@@ -1,0 +1,144 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* === Contenedor global === */
+#global-content .container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* === Encabezados === */
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin: 1.5rem 0 0.8rem;
+  color: #444;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background: #eee;
+  margin: 1rem 0;
+}
+
+/* === Formulario añadir === */
+.formulario {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#to-do-input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+#to-do-input:focus {
+  border-color: #111;
+}
+
+.añadir {
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0 1.2rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.añadir:hover {
+  background: #333;
+}
+
+/* === Listas === */
+.cont-to-do-list,
+.cont-completed-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+/* === Items === */
+.item-to-do {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.item-to-do:last-child {
+  border-bottom: none;
+}
+
+.item-to-do p {
+  flex: 1;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* === Checkbox === */
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #111;
+}
+
+/* === Botón eliminar === */
+.equis {
+  background: transparent;
+  border: none;
+  color: #888;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.equis:hover {
+  background: #f3f3f3;
+  color: #111;
+}
+
+/* === Tareas completadas === */
+.cont-completed-list p {
+  text-decoration: line-through;
+  color: #888;
+}

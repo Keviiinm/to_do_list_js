@@ -9,46 +9,44 @@
 <body>
     
     <main>
+
         <section id="global-content">
-            <div id="add-item">
+       
+            <div class="container">
+
                 <h1>TO DO LIST</h1>
                 <hr>
+
                 <h2>ADD ITEM</h2>
-                <form action="#">
-                    <input type="text" id="new-task" placeholder="añadir item">
-                    <button id="add-btn">+</button>                    
+
+                <form action="" class="formulario">
+                    <input type="text" placeholder="añade una tarea" id="to-do-input">
+                    <button type="button" class="añadir" id="add-btn">Añadir</button>
                 </form>
-            </div>
-            <div id="cont-to-do">
-                <h2>To Do</h2>
-                <div class="hem-to-do">                    
-                    <input type="checkbox" id="task-1">
-                    <label for="task1">Item List 1</label>
-                </div>
-                <div class="hem-to-do">                    
-                    <input type="checkbox" id="task-1">
-                    <label for="task1">Item List 1</label>
-                </div>
-                <div class="hem-to-do">                    
-                    <input type="checkbox" id="task-1">
-                    <label for="task1">Item List 1</label>
-                </div>
-            </div>
-        
 
-            <div id="completed">
-                <h2>Tareas Completadas</h2>
-                <div class="item-to-do">
-                    <input type="checkbox" id="task-completed" checked>
-                    <label for="taskCompleted">Item 1 completado</label>
+
+                <hr>
+
+                <h2>TO DO</h2>
+
+                <div class="cont-to-do-list" id="to-do">
+                    <div class="item-to-do">
+                        <input type="checkbox">
+                        <p>item list 1</p>
+                        <button type="button" class="equis">Eliminar</button>
+                    </div>
+                </div>
+
+                <hr>
+
+                <h2>COMPLETED</h2>
+                <div class="cont-completed-list" id="completed">
+                    <input type="checkbox">
+                    <p>item list 1</p>
+                    <button type="button" class="equis">Eliminar</button>
                 </div>
             </div>
-
-
-
-
         </section>
-
     </main>
 
 
