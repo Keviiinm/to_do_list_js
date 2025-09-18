@@ -94,7 +94,6 @@ hr {
 .cont-to-do-list,
 .cont-completed-list {
   display: flex;
-  flex-direction: column;
   gap: 0.8rem;
   margin-top: 0.8rem;
 }
@@ -103,7 +102,6 @@ hr {
 .item-to-do {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 0.8rem;
   padding: 0.6rem 0.8rem;
   border-bottom: 1px solid #f0f0f0;

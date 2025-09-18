@@ -4,7 +4,7 @@
 const input = document.getElementById ("to-do-input");
 const addBtn = document.getElementById("add-btn");
 const toDoList = document.getElementById("cont-to-do-list");
-const completedToDoList = document.getElementById("completed");
+const completedToDoList = document.getElementById("cont-completed-list");
 
 
 
@@ -16,16 +16,21 @@ function createToDoItem(textoItem){
     // *creamos el nodo o elemento padre
     const item = document.createElement("div")
     item.classList.add ("item-to-do")
+
     // *creamos el nodo hijo del input y le agregamos el type 
     const checkBox = document.createElement("input")
     checkBox.type ="checkbox"
+
     // *creamos el siguiente nodo hijo parrafo
     // *A este parrafo le asigno el valor del argumento de la funcion es decir lo que escribe el ususario en el campo
+
     const p = document.createElement ("p")
     p.textContent = textoItem
+
     // *creamos el ultimo nodo hijo para eliminar
     const deleteBtn = document.createElement ("button")
     deleteBtn.textContent = "x";
+    
     // *ensamblamos dentro del nodo padre sus nodos hijos, es decir la estructura de la tarea
     item.appendChild(checkBox);
     item.appendChild(p);
@@ -44,8 +49,34 @@ addBtn.addEventListener ('click', ()=>{
     }else{
         const newItem = createToDoItem(textoItem);
         toDoList.appendChild(newItem);
+        eventsToItem(newItem);
         input.value = "";
     }
-});
+
+    // *LA SIGUIENTE FUNCION NOS PERMITIRA AGREGAR EL FUNCIONAMIENTO PRINCIPAL SOBRE LAS TAREAS ES DECIR MARCAR LA TAREA COMO COMPLETADA O EN DADO CASO ELIMINARLA
+
+})
+
+function eventsToItem(item){
+    // *UTILIZAMOS EL QUERY SELECTOR PARA CAPTURAR EL INPUT Y BUTTON QUE ESTEN ADENTRO
+    const checkbox = item.querySelector('input');
+    const deleteBtn = item.querySelector('button');
+
+    // *COMPLETAR LA TAREA
+    checkbox.addEventListener('change', ()=>{
+        if (checkbox.checked) {
+            completedToDoList.appendChild(item);
+            
+        }else{
+            toDoList.appendChild(item);
+        }
+    });
+    
+    // evento de eliminar
+    deleteBtn.addEventListener('click', ()=>{
+        item.remove()
+    })
+    
+}
 
 
