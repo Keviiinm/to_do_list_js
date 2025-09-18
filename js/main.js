@@ -77,7 +77,25 @@ function eventsToItem(item){
         item.remove()
     })
     
+
+    
+    
 }
+// *Detectamos la tecla Enter en el input para agregar tarea
+input.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        const textoItem = input.value.trim();
+        if (textoItem == "") {
+            alert("no se puede crear una tarea vacia")
+        } else {
+            const newItem = createToDoItem(textoItem);
+            toDoList.appendChild(newItem);
+            eventsToItem(newItem);
+            input.value = "";
+        }
+    }
+});
+
 
 const btnStyles = document.getElementById('change-styles')
 btnStyles.addEventListener('click', ()=>{
@@ -91,5 +109,6 @@ btnStyles.addEventListener('click', ()=>{
         btnStyles.textContent = 'Modo noche'
     }
 
+    
 })
 

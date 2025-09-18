@@ -149,7 +149,7 @@ input[type="checkbox"] {
 #cont-completed-list .item-to-do{
   text-decoration: line-through;
 }
-body #changue-styles{
+body #change-styles{
   position: absolute;
   bottom: 10px;
   right: 10px;
