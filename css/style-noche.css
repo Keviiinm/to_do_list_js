@@ -6,7 +6,7 @@
 
 
 body {
-  background: #f9f9f9;
+  background: #000000ef;
   color: #333;
   display: flex;
   justify-content: center;
@@ -14,39 +14,39 @@ body {
   
 }
 
-/* !Contenedor global*/
+
 #global-content .container {
-  background: #fafaf4cc;
+  background: #000000;
   margin-top: 50px;
   padding: 50px;
   border-radius: 16px;
   max-width: 700px;
   width: 100%;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.5);
 }
 
-/* !Encabezados  */
+
 h1 {
   font-size: 30px;
   text-align: center;
   margin-bottom: 1rem;
-  color: #111;
+  color: #ffffff;
 }
 
 h2 {
   font-size: 1.2rem;
   margin: 1.5rem 0 0.8rem;
-  color: #444;
+  color: #ffffffdc;
 }
 
 hr {
   border: none;
   height: 2px;
-  background: #eee;
+  background: #ffffff;
   margin: 1rem 0;
 }
 
-/* !Formulario añadir */
+
 
 .formulario {
   display: flex;
@@ -64,7 +64,7 @@ hr {
 .item-to-do button{
   border-radius: 5px;
   padding: 7px 10px;
-  border-color: #111;
+  border-color: #ffffff;
   
 }
 
@@ -84,13 +84,13 @@ hr {
 }
 
 .añadir:hover {
-  background: #a7a7a7;
+  background: #e9e8e8;
   color: black;
   transition: 0.5s;
   border-radius: 1px 20px;
 }
 
-/* === Listas === */
+
 .cont-to-do-list,
 .cont-completed-list {
   display: flex;
@@ -98,7 +98,7 @@ hr {
   margin-top: 0.8rem;
 }
 
-/* === Items === */
+
 .item-to-do {
   display: flex;
   align-items: center;
@@ -117,14 +117,14 @@ hr {
   color: #333;
 }
 
-/* === Checkbox === */
+
 input[type="checkbox"] {
   width: 18px;
   height: 18px;
   accent-color: #111;
 }
 
-/* === Botón eliminar === */
+
 .equis {
   background: transparent;
   border: none;
@@ -141,7 +141,7 @@ input[type="checkbox"] {
   color: #111;
 }
 
-/* === Tareas completadas === */
+
 .cont-completed-list p {
 
   color: #888;
@@ -149,7 +149,7 @@ input[type="checkbox"] {
 #cont-completed-list .item-to-do{
   text-decoration: line-through;
 }
-#change-styles{
+body #changue-styles{
   position: absolute;
   bottom: 10px;
   right: 10px;

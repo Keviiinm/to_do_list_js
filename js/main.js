@@ -30,7 +30,7 @@ function createToDoItem(textoItem){
     // *creamos el ultimo nodo hijo para eliminar
     const deleteBtn = document.createElement ("button")
     deleteBtn.textContent = "x";
-    
+
     // *ensamblamos dentro del nodo padre sus nodos hijos, es decir la estructura de la tarea
     item.appendChild(checkBox);
     item.appendChild(p);
@@ -79,4 +79,17 @@ function eventsToItem(item){
     
 }
 
+const btnStyles = document.getElementById('change-styles')
+btnStyles.addEventListener('click', ()=>{
+    const linkCss = document.getElementById('enlace-estilos')
+
+    if (linkCss.getAttribute('href') === 'css/style.css') {
+        linkCss.setAttribute('href', 'css/style-noche.css')    
+        btnStyles.textContent = "Modo Dia"
+    }else{
+        linkCss.setAttribute('href', 'css/style.css')    
+        btnStyles.textContent = 'Modo noche'
+    }
+
+})
 
